@@ -31,6 +31,21 @@ Então será necessário informar o atributo name ou o atributo [ngModelOptions]
   </po-lookup>
   ```
 
+- Ao utilizar a propriedade `p-advanced-filters`, a janela de busca avançada é construída
+a partir do `po-dynamic-form`. Em aplicações que não importam o `PoModule`, como projetos
+standalone* ou que utilizam módulos específicos, é necessário importar o `PoDynamicModule`
+no componente ou módulo onde o `po-lookup` é utilizado, caso contrário será lançado o erro
+`NG0201: No provider found for _TitleCasePipe` ao abrir a busca avançada.
+```
+  import { PoDynamicModule, PoFieldModule } from '@po-ui/ng-components';
+
+  @Component({
+    standalone: true,
+    imports: [PoFieldModule, PoDynamicModule]
+  })
+  export class MyComponent {}
+  ```
+
 #### Tokens customizáveis
 
 É possível alterar o estilo do componente usando os seguintes tokens (CSS):
@@ -109,6 +124,7 @@ Então será necessário informar o atributo name ou o atributo [ngModelOptions]
 |---|---|---|---|
 | `additionalHelp` | `'p-additional-help'` | `EventEmitter` | Evento disparado ao clicar no ícone de ajuda adicional. |
 | `change` | `'p-change'` | `EventEmitter` | Evento que será disparado ao alterar o model. |
+| `changeModel` | `'p-change-model'` | `EventEmitter` | Evento disparado sempre que o valor do model é alterado, seja por interação do usuário |
 | `changeVisibleColumns` | `'p-change-visible-columns'` | `EventEmitter` | Evento disparado ao fechar o popover do gerenciador de colunas após alterar as colunas visíveis. |
 | `columnRestoreManager` | `'p-restore-column-manager'` | `EventEmitter` | Evento disparado ao clicar no botão de restaurar padrão no gerenciador de colunas. |
 | `keydown` | `'p-keydown'` | `EventEmitter` | Evento disparado quando uma tecla é pressionada enquanto o foco está no componente. |

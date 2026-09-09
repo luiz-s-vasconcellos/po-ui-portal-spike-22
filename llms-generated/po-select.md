@@ -79,6 +79,7 @@ veja mais em **[p-combo-option-template](/documentation/po-combo-option-template
 | `additionalHelp` | `'p-additional-help'` | `EventEmitter` | Evento disparado ao clicar no ícone de ajuda adicional. |
 | `blur` | `'p-blur'` | `EventEmitter` | Evento disparado ao sair do campo. |
 | `change` | `'p-change'` | `EventEmitter` | Evento disparado ao alterar valor do campo. |
+| `changeModel` | `'p-change-model'` | `EventEmitter` | Evento disparado sempre que o valor do model é alterado, seja por interação do usuário |
 | `keydown` | `'p-keydown'` | `EventEmitter` | Evento disparado quando uma tecla é pressionada enquanto o foco está no componente. |
 | `ngModelChange` | `'ngModelChange'` | `EventEmitter` | Função para atualizar o ngModel do componente, necessário quando não for utilizado dentro da tag form. |
 

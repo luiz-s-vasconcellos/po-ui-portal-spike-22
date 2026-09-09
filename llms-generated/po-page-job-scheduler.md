@@ -31,6 +31,7 @@ Veja mais sobre os padrões utilizados nas requisições no [Guia de implementa�
 
 | Propriedade | Alias | Tipo | Opcional | Padrão | Descrição |
 |---|---|---|---|---|---|
+| `allowDirectNavigation` | `'p-allow-direct-navigation'` | `boolean` | sim | `false` | Permite a navegação direta ao clicar em um step (passo) previamente preenchido e validado, |
 | `beforeSendAction` | `'p-before-send'` | `unknown` | sim | - | Função chamada após realizar a confirmação da execução no PoPageJobScheduler. |
 | `breadcrumb` | `'p-breadcrumb'` | `PoBreadcrumb` | sim | - | Objeto com as propriedades do breadcrumb. |
 | `componentsSize` | `'p-components-size'` | `string` | sim | `medium` | Define o tamanho dos componentes de formulário no template: |

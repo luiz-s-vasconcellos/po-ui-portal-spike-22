@@ -89,7 +89,7 @@ O `po-login` é um input específico para login. Já possui tipo, estilo e ícon
 | `additionalHelp` | `'p-additional-help'` | `EventEmitter` | Evento disparado ao clicar no ícone de ajuda adicional. |
 | `blur` | `'p-blur'` | `EventEmitter` | Evento disparado ao sair do campo. |
 | `change` | `'p-change'` | `EventEmitter` | Evento disparado ao alterar valor e deixar o campo. |
-| `changeModel` | `'p-change-model'` | `EventEmitter` | Evento disparado ao alterar valor do model. |
+| `changeModel` | `'p-change-model'` | `EventEmitter` | Evento disparado sempre que o valor do model é alterado, seja por interação do usuário |
 | `enter` | `'p-enter'` | `EventEmitter` | Evento disparado ao entrar do campo. |
 | `keydown` | `'p-keydown'` | `EventEmitter` | Evento disparado quando uma tecla é pressionada enquanto o foco está no componente. |
 

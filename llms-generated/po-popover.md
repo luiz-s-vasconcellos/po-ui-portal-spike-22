@@ -27,6 +27,7 @@ Os eventos permitidos são: `click` e `hover`.
 | `appendBox` | `'p-append-in-body'` | `boolean` | sim | `false` | Define que o popover será inserido no body da página em vez do elemento definido em `p-target`. Essa opção pode |
 | `customClasses` | `p-custom-classes` | `string` | sim | - | Permite a inclusão de classes CSS customizadas ao componente. |
 | `hideArrow` | `'p-hide-arrow'` | `boolean` | sim | `false` | Desabilita a seta do componente *popover*. |
+| `offset` | `'p-offset'` | `number` | sim | `8` | Define o espaçamento (em pixels) entre o componente alvo (`p-target`) e o `po-popover`. |
 | `position` | `'p-position'` | `string` | sim | right | Define a posição que o po-popover abrirá em relação ao componente alvo. Sugere-se que seja |
 | `target` | `'p-target'` | `ElementRef | HTMLElement` | não | - | ElementRef do componente de origem responsável por abrir o popover. |
 | `title` | `'p-title'` | `string` | sim | - | Título do popover. |

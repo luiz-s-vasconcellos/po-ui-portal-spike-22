@@ -114,6 +114,7 @@ Obs: Só é possível realizar alterações ao adicionar a classe `.po-input`
 
 | Evento | Alias | Tipo | Descrição |
 |---|---|---|---|
+| `changeModel` | `'p-change-model'` | `EventEmitter` | Evento disparado sempre que o valor do model é alterado, seja por interação do usuário |
 | `keydown` | `'p-keydown'` | `EventEmitter` | Evento disparado quando uma tecla é pressionada enquanto o foco está no componente. |
 | `onblur` | `'p-blur'` | `EventEmitter` | Evento disparado ao sair do campo (blur). |
 | `onchange` | `'p-change'` | `EventEmitter` | Evento disparado ao alterar valor do campo. |

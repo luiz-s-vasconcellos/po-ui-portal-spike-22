@@ -10,6 +10,8 @@ Interface para definição das literais usadas no `po-page-dynamic-search` e no 
 
 | Propriedade | Tipo | Opcional | Descrição |
 |---|---|---|---|
+| `disclaimerBooleanFalse` | `string` | sim | Texto exibido no *disclaimer* de filtros do tipo `boolean` quando o valor for `false` e |
+| `disclaimerBooleanTrue` | `string` | sim | Texto exibido no *disclaimer* de filtros do tipo `boolean` quando o valor for `true` e |
 | `disclaimerGroupTitle` | `string` | sim | Título do grupo de *disclaimers* que será exibido após realizar alguma busca. |
 | `filterCancelLabel` | `string` | sim | Texto exibido no botão para cancelamento da busca avaçanda. |
 | `filterConfirmLabel` | `string` | sim | Texto exibido no botão para confirmação da busca avaçanda. |

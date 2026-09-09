@@ -23,5 +23,7 @@ Indicação de uso:
 | `items` | `Array<PoHeaderActionToolItem>` | sim | Itens de ações |
 | `label` | `string` | sim | Título da ação |
 | `link` | `string` | sim | link utilizado no redirecionamento das páginas. |
+| `onClose` | `(label?: string) => void` | sim | Função executada quando o popup ou popover da ação é fechado. |
+| `onOpen` | `(label?: string) => void` | sim | Função executada quando o popup ou popover da ação é aberto. |
 | `popover` | `PoHeaderActionPopoverAction` | sim | Template que será utilizado na ação |
 | `tooltip` | `string` | sim | Texto que será apresentado na tooltip |

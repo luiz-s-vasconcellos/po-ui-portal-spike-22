@@ -70,6 +70,7 @@ Veja abaixo as demais regras nas documentações de `p-decimals-length` e `p-tho
 | `autoFocus` | `'p-auto-focus'` | `boolean` | sim | `false` | Aplica foco no elemento ao ser iniciado. |
 | `compactLabel` | `p-compact-label` | `boolean` | sim | `false` | Define se o título do campo será exibido de forma compacta. |
 | `decimalsLength` | `'p-decimals-length'` | `number` | sim | `2` | Quantidade máxima de casas decimais. |
+| `displayFormat` | `p-display-format` | `string | undefined` | sim | - | Define uma máscara de formatação numérica avançada para o campo. |
 | `emitAllChanges` | `'p-emit-all-changes'` | `boolean` | sim | `false` | Sempre emite as alterações do model mesmo quando o valor atual for igual ao valor anterior. |
 | `errorAsyncProperties` | `'p-error-async-properties'` | `ErrorAsyncProperties` | sim | - | Realiza alguma validação customizada assíncrona no componente. |
 | `errorLimit` | `'p-error-limit'` | `boolean` | sim | `false` | Limita a exibição da mensagem de erro a duas linhas e exibe um tooltip com o texto completo. |
@@ -103,7 +104,7 @@ Veja abaixo as demais regras nas documentações de `p-decimals-length` e `p-tho
 | `additionalHelp` | `'p-additional-help'` | `EventEmitter` | Evento disparado ao clicar no ícone de ajuda adicional. |
 | `blur` | `'p-blur'` | `EventEmitter` | Evento disparado ao sair do campo. |
 | `change` | `'p-change'` | `EventEmitter` | Evento disparado ao alterar valor e deixar o campo. |
-| `changeModel` | `'p-change-model'` | `EventEmitter` | Evento disparado ao alterar valor do model. |
+| `changeModel` | `'p-change-model'` | `EventEmitter` | Evento disparado sempre que o valor do model é alterado, seja por interação do usuário |
 | `enter` | `'p-enter'` | `EventEmitter` | Evento disparado ao entrar do campo. |
 | `keydown` | `'p-keydown'` | `EventEmitter` | Evento disparado quando uma tecla é pressionada enquanto o foco está no componente. |
 

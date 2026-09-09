@@ -108,6 +108,7 @@ não seja encontrado, então a lista de itens voltará para o estado inicial.
 | `additionalHelp` | `'p-additional-help'` | `EventEmitter` | Evento disparado ao clicar no ícone de ajuda adicional. |
 | `blur` | `'p-blur'` | `EventEmitter` | Evento disparado ao sair do campo. |
 | `change` | `'p-change'` | `EventEmitter` | Deve ser informada uma função que será disparada quando houver alterações no ngModel. A função receberá como argumento o model modificado. |
+| `changeModel` | `'p-change-model'` | `EventEmitter` | Evento disparado sempre que o valor do model é alterado, seja por interação do usuário |
 | `inputChange` | `'p-input-change'` | `EventEmitter` | Deve ser informada uma função que será disparada quando houver alterações no Search input. A função receberá como argumento o input modificado. |
 | `keydown` | `'p-keydown'` | `EventEmitter` | Evento disparado quando uma tecla é pressionada enquanto o foco está no componente. |
 | `ngModelChange` | `'ngModelChange'` | `EventEmitter` | Função para atualizar o ngModel do componente, necessário quando não for utilizado dentro da tag form. |

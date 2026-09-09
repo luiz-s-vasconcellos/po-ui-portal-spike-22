@@ -33,6 +33,7 @@ Interface para definição das propriedades dos campos de entrada que serão cri
 | `disabled` | `boolean` | sim | Desabilita o campo caso informar o valor *true*. |
 | `disabledInitFilter` | `boolean` | sim | Desabilita o filtro inicial no serviço do `po-combo`, que é executado no primeiro clique no campo. |
 | `disabledTabFilter` | `boolean` | sim | Se verdadeiro, desabilitará a busca de um item via TAB no `po-combo`. |
+| `displayFormat` | `string` | sim | Define uma máscara de formatação numérica avançada para o campo. |
 | `divider` | `string` | sim | Exibirá um divisor acima, utilizando o seu conteudo como título. |
 | `dragDrop` | `boolean` | sim | Exibe a área onde é possível arrastar e selecionar os arquivos. Quando estiver definida, omite o botão para seleção de arquivos |
 | `dragDropHeight` | `number` | sim | Define em *pixels* a altura da área onde podem ser arrastados os arquivos. A altura mínima aceita é `160px`. |

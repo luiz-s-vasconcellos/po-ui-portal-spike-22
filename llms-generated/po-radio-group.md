@@ -82,6 +82,7 @@ Portanto, ao aplicar estilos customizados, é importante focar na customização
 |---|---|---|---|
 | `additionalHelp` | `'p-additional-help'` | `EventEmitter` | Evento disparado ao clicar no ícone de ajuda adicional. |
 | `change` | `'p-change'` | `EventEmitter` | Evento ao alterar valor do campo. |
+| `changeModel` | `'p-change-model'` | `EventEmitter` | Evento disparado sempre que o valor do model é alterado, seja por interação do usuário |
 | `keydown` | `'p-keydown'` | `EventEmitter` | Evento disparado quando uma tecla é pressionada enquanto o foco está no componente. |
 
 ## Métodos
