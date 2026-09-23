@@ -53,7 +53,7 @@ No rodapé é possível utilizar o componente [`PoPageSlideFooter`](/documentati
 | `componentsSize` | `'p-components-size'` | `string` | sim | `medium` | Define o tamanho dos componentes de formulário no template: |
 | `flexibleWidth` | `'p-flexible-width'` | `boolean` | sim | `false` | Permite a expansão dinâmica da largura do `po-page-slide` quando `p-size` for `auto` (automático). |
 | `hideClose` | `'p-hide-close'` | `boolean` | sim | `false` | Oculta o botão de encerramento da página. |
-| `size` | `'p-size'` | `string` | sim | `md` | Define o tamanho da página. |
+| `size` | `'p-size'` | `PoPageSlideSize` | sim | `md` | Define o tamanho da página. |
 | `subtitle` | `'p-subtitle'` | `string` | sim | - | Subtítulo da página. |
 | `title` | `'p-title'` | `string` | não | - | Título da página. |
 

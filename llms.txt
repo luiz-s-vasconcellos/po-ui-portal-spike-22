@@ -11,6 +11,8 @@ ng add @po-ui/ng-components
 ## Componentes e Diretivas
 
 - [PoComboOptionTemplateDirective](https://po-ui.io/llms-generated/[p-combo-option-template].md): Esta diretiva permite personalizar o conteúdo dos itens exibidos na lista de opções do componente.
+- [PoDragDirective](https://po-ui.io/llms-generated/[p-drag].md): A diretiva `p-drag` torna um elemento arrastável, encapsulando o `CdkDrag` do Angular CDK.
+- [PoDropListDirective](https://po-ui.io/llms-generated/[p-drop-list].md): A diretiva `p-drop-list` define um container onde componentes `po-widget` podem ser
 - [PoJobSchedulerParametersTemplateDirective](https://po-ui.io/llms-generated/[p-job-scheduler-parameters-template].md): Esta diretiva permite personalizar o conteúdo da uma ou várias etapa(s) de parametrização do componente de PoPageJobScheduler.
 - [PoJobSchedulerSummaryTemplateDirective](https://po-ui.io/llms-generated/[p-job-scheduler-summary-template].md): Esta diretiva permite personalizar o conteúdo de resumo das informações de parâmetro na etapa de conclusão do componente de PoPageJobScheduler.
 - [PoListViewContentTemplateDirective](https://po-ui.io/llms-generated/[p-list-view-content-template].md): Esta diretiva permite que sejam apresentadas informações essenciais de cada item.
@@ -168,6 +170,9 @@ ng add @po-ui/ng-components
 - [PoDisclaimer](https://po-ui.io/llms-generated/po-disclaimer.md): Interface que representa o objeto `po-disclaimer`.
 - [PoDisclaimerGroup](https://po-ui.io/llms-generated/po-disclaimer-group.md): Interface que representa o objeto `po-disclaimer-group`.
 - [PoDisclaimerGroupRemoveAction](https://po-ui.io/llms-generated/po-disclaimer-group-remove-action.md): Estrutura do objeto representando o estado dos *disclaimers* após a remoção.
+- [PoDragEnterEvent](https://po-ui.io/llms-generated/po-drag-enter-event.md): Evento emitido quando um item entra em um container `p-drop-list`.
+- [PoDraggableItem](https://po-ui.io/llms-generated/po-draggable-item.md): Define a estrutura de um item arrastável genérico utilizado pelas diretivas
+- [PoDropEvent](https://po-ui.io/llms-generated/po-drop-event.md): Evento emitido quando um item é solto em um container (`p-drop-list`), contendo os índices,
 - [PoDropdownAction](https://po-ui.io/llms-generated/po-dropdown-action.md): Interface para as ações do componente `po-dropdown`.
 - [PoDynamicFormField](https://po-ui.io/llms-generated/po-dynamic-form-field.md): Interface para definição das propriedades dos campos de entrada que serão criados dinamicamente.
 - [PoDynamicFormFieldChanged](https://po-ui.io/llms-generated/po-dynamic-form-field-changed.md): Estrutura dos valores que serão disparados quando houver uma mudança em um campo ou no formulário.

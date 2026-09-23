@@ -73,6 +73,81 @@ a responsabilidade de estilização dos elementos da lista, tais como título e 
 
 ---
 
+# PoDragDirective
+
+**Seletor:** `[p-drag]`
+**Tipo:** Componente / Diretiva
+**Pacote:** `@po-ui/ng-components`
+**Referência:** https://po-ui.io/documentation/[p-drag]
+
+A diretiva `p-drag` torna um elemento arrastável, encapsulando o `CdkDrag` do Angular CDK.
+
+Ela pode ser usada em conjunto com a diretiva `p-drop-list`. O valor atribuído ao seletor (`p-drag`)
+corresponde ao dado do item, que é emitido nos eventos de drag.
+
+> Atualmente validada com o componente `po-widget`. O suporte a outros componentes
+> PO UI será avaliado em versões futuras.
+
+## Inputs
+
+| Propriedade | Alias | Tipo | Opcional | Padrão | Descrição |
+|---|---|---|---|---|---|
+| `data` | `p-drag` | `PoDraggableItem` | não | - | Dado associado ao item arrastável. O valor é emitido nos eventos |
+| `dragDisabled` | `p-drag-disabled` | `boolean` | sim | false | Desabilita o arraste do item. Quando `true`, o usuário não pode iniciar |
+
+## Outputs
+
+| Evento | Alias | Tipo | Descrição |
+|---|---|---|---|
+| `dragEnded` | `p-drag-ended` | `EventEmitter` | Evento emitido quando o arraste do item é encerrado. |
+| `dragMoved` | `p-drag-moved` | `EventEmitter` | Evento emitido continuamente enquanto o item está sendo arrastado. |
+| `dragStarted` | `p-drag-started` | `EventEmitter` | Evento emitido quando o arraste do item é iniciado. |
+
+
+---
+
+# PoDropListDirective
+
+**Seletor:** `[p-drop-list]`
+**Tipo:** Componente / Diretiva
+**Pacote:** `@po-ui/ng-components`
+**Referência:** https://po-ui.io/documentation/[p-drop-list]
+
+A diretiva `p-drop-list` define um container onde componentes `po-widget` podem ser
+arrastados e reorganizados, encapsulando o `CdkDropList` do Angular CDK.
+
+Permite:
+- Reordenação de `po-widget` dentro de um único container.
+- Transferência de `po-widget` entre containers conectados via `p-drop-list-connected-to`.
+- Itens individuais desabilitados via `p-drag-disabled` na diretiva `p-drag`.
+
+> Atualmente esta diretiva é suportada para uso com `po-widget`.
+> O suporte a outros componentes será avaliado em versões futuras.
+
+> A diretiva não impõe nenhum estilo de layout (flex, grid etc.). O layout
+> é responsabilidade do consumidor.
+
+## Inputs
+
+| Propriedade | Alias | Tipo | Opcional | Padrão | Descrição |
+|---|---|---|---|---|---|
+| `dropListConnectedTo` | `p-drop-list-connected-to` | `Array<string>` | sim | - | Lista de containers conectados. Aceita um array de ids (`string`). Quando configurado, |
+| `dropListDisabled` | `p-drop-list-disabled` | `boolean` | sim | false | Desabilita o drag para os elementos dentro do container. |
+| `dropListId` | `p-drop-list-id` | `string` | sim | - | Identificador único do container. Utilizado para conectar múltiplos |
+| `dropListOrientation` | `p-drop-list-orientation` | `'horizontal' | 'vertical' | 'mixed'` | sim | `'vertical'` | Orientação dos itens dentro do container. Afeta a lógica de sombra de |
+| `dropSortingDisabled` | `p-drop-sorting-disabled` | `boolean` | sim | false | Desabilita a reordenação automática dos itens durante o arraste. |
+| `items` | `p-drop-list` | `Array<PoDraggableItem>` | não | - | Lista de itens gerenciada pelo container. A diretiva muta este array |
+
+## Outputs
+
+| Evento | Alias | Tipo | Descrição |
+|---|---|---|---|
+| `dragEntered` | `p-drag-entered` | `EventEmitter` | Evento emitido quando um item externo entra neste container durante o arraste. |
+| `dropped` | `p-dropped` | `EventEmitter` | Evento emitido quando um item é solto dentro deste container. |
+
+
+---
+
 # PoJobSchedulerParametersTemplateDirective
 
 **Seletor:** `[p-job-scheduler-parameters-template]`
@@ -6088,7 +6163,7 @@ No rodapé é possível utilizar o componente [`PoPageSlideFooter`](/documentati
 | `componentsSize` | `'p-components-size'` | `string` | sim | `medium` | Define o tamanho dos componentes de formulário no template: |
 | `flexibleWidth` | `'p-flexible-width'` | `boolean` | sim | `false` | Permite a expansão dinâmica da largura do `po-page-slide` quando `p-size` for `auto` (automático). |
 | `hideClose` | `'p-hide-close'` | `boolean` | sim | `false` | Oculta o botão de encerramento da página. |
-| `size` | `'p-size'` | `string` | sim | `md` | Define o tamanho da página. |
+| `size` | `'p-size'` | `PoPageSlideSize` | sim | `md` | Define o tamanho da página. |
 | `subtitle` | `'p-subtitle'` | `string` | sim | - | Subtítulo da página. |
 | `title` | `'p-title'` | `string` | não | - | Título da página. |
 
@@ -11109,6 +11184,69 @@ Estrutura do objeto representando o estado dos *disclaimers* após a remoção.
 |---|---|---|---|
 | `currentDisclaimers` | `Array<PoDisclaimer>` | não | Lista com os *disclaimers* atuais (restantes). |
 | `removedDisclaimer` | `PoDisclaimer` | não | Disclaimer* que foi removido. |
+
+
+---
+
+# PoDragEnterEvent
+
+**Tipo:** Interface / Modelo
+**Pacote:** `@po-ui/ng-components`
+**Referência:** https://po-ui.io/documentation/po-drag-enter-event
+
+Evento emitido quando um item entra em um container `p-drop-list`.
+
+## Propriedades
+
+| Propriedade | Tipo | Opcional | Descrição |
+|---|---|---|---|
+| `container` | `string` | não | Identificador do container que recebeu o item. |
+| `item` | `T` | não | O item que entrou no container. |
+
+
+---
+
+# PoDraggableItem
+
+**Tipo:** Interface / Modelo
+**Pacote:** `@po-ui/ng-components`
+**Referência:** https://po-ui.io/documentation/po-draggable-item
+
+Define a estrutura de um item arrastável genérico utilizado pelas diretivas
+`PoDropListDirective` e `PoDragDirective`.
+
+A interface é intencionalmente leve — contém apenas os campos essenciais para
+qualquer componente arrastável.
+
+## Propriedades
+
+| Propriedade | Tipo | Opcional | Descrição |
+|---|---|---|---|
+| `data` | `any` | sim | Dados arbitrários do consumidor. Útil para associar informações extras |
+| `id` | `string` | não | Identificador único do item. |
+
+
+---
+
+# PoDropEvent
+
+**Tipo:** Interface / Modelo
+**Pacote:** `@po-ui/ng-components`
+**Referência:** https://po-ui.io/documentation/po-drop-event
+
+Evento emitido quando um item é solto em um container (`p-drop-list`), contendo os índices,
+o item movido e os identificadores dos containers envolvidos.
+
+## Propriedades
+
+| Propriedade | Tipo | Opcional | Descrição |
+|---|---|---|---|
+| `container` | `string` | não | Identificador do container de destino. |
+| `currentIndex` | `number` | não | Índice final do item após o drop. |
+| `item` | `PoDraggableItem` | não | O item que foi movido. |
+| `items` | `Array<PoDraggableItem>` | não | Array resultante após o drop, já com a nova ordem aplicada. |
+| `previousContainer` | `string` | sim | Identificador do container de origem. Preenchido apenas quando o item |
+| `previousIndex` | `number` | não | Índice original do item antes do drop. |
 
 
 ---
