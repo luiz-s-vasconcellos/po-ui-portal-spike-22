@@ -4,7 +4,7 @@
 **Pacote:** `@po-ui/ng-components`
 **Referência:** https://po-ui.io/documentation/po-lookup-advanced-filter
 
-Interface para definição das propriedades dos campos de entrada que serão criados dinamicamente.
+Interface para definição das propriedades dos campos de entrada que serão criados dinamicamente na busca avançada.
 
 ## Propriedades
 
@@ -75,6 +75,7 @@ Interface para definição das propriedades dos campos de entrada que serão cri
 | `icon` | `string | TemplateRef<void>` | sim | Define o ícone que será exibido no início do campo. |
 | `infiniteScroll` | `boolean` | sim | Se verdadeiro ativa a funcionalidade de scroll infinito para o combo ou lookup, ao chegar ao fim da tabela executará nova busca dos dados conforme paginação. |
 | `infiniteScrollDistance` | `number` | sim | Define o percentual necessário para disparar o evento show-more, que é responsável por carregar mais dados no combo. Caso o valor seja maior que 100 ou menor que 0, o valor padrão será 100%. |
+| `initValue` | `any` | sim | Define um valor inicial para um filtro de busca avançada. |
 | `invalidValue` | `boolean` | sim | Define qual valor será considerado como inválido para exibir a mensagem da propriedade `p-field-error-message`. |
 | `isoFormat` | `PoDatepickerIsoFormat` | sim | Padrão de formatação para saída do model, independentemente do formato de entrada. |
 | `key` | `boolean` | sim | Identificador |

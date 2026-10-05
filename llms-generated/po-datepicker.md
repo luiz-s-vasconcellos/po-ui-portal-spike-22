@@ -101,7 +101,7 @@ Obs: Só é possível realizar alterações ao adicionar a classe `.po-input`
 | `showErrorMessageRequired` | `'p-required-field-error-message'` | `boolean` | sim | `false` | Exibe a mensagem setada na propriedade `p-error-pattern` se o campo estiver vazio e for requerido. |
 | `showRequired` | `'p-show-required'` | `boolean` | não | - | Define se a indicação de campo obrigatório será exibida. |
 | `size` | `'p-size'` | `string` | sim | `medium` | Define o tamanho do componente: |
-| `yearRangeLimit` | `'p-year-range-limit'` | `number` | sim | 150 | Define o limite de anos exibidos nas variações `month-year` e `year`, |
+| `yearRangeLimit` | `'p-year-range-limit'` | `number` | não | 150 | Define o limite de anos exibidos nas variações `month-year` e `year`, |
 
 ## Outputs
 

@@ -62,7 +62,7 @@ ng add @po-ui/ng-components
 - [PoInfoComponent](https://po-ui.io/llms-generated/po-info.md): Este componente tem como objetivo renderizar valores na tela no estilo label na parte superior e
 - [PoInputComponent](https://po-ui.io/llms-generated/po-input.md): Este é um componente baseado em input, com várias propriedades do input nativo e outras
 - [PoLinkComponent](https://po-ui.io/llms-generated/po-link.md): Os links são utilizados como rota.
-- [PoListViewComponent](https://po-ui.io/llms-generated/po-list-view.md): Componente de lista que recebe um array de objetos e renderiza de forma dinâmica os dados de
+- [PoListViewComponent](https://po-ui.io/llms-generated/po-list-view.md): O componente `po-list-view` é responsável por renderizar de forma dinâmica uma lista de dados baseada em um *array* de
 - [PoLoadingOverlayComponent](https://po-ui.io/llms-generated/po-loading-overlay.md): Este componente mostra ao usuário uma imagem de _loading_ e bloqueia a página inteira ou o container escolhido,
 - [PoLoginComponent](https://po-ui.io/llms-generated/po-login.md): Este é um componente baseado em input, com várias propriedades do input nativo e outras
 - [PoLookupComponent](https://po-ui.io/llms-generated/po-lookup.md): Componente utilizado para abrir uma janela de busca com uma tabela que lista dados de um serviço.
@@ -203,8 +203,9 @@ ng add @po-ui/ng-components
 - [PoLanguage](https://po-ui.io/llms-generated/po-language.md): Interface para descrição das linguagens disponíveis no sistema.
 - [PoListBoxLiterals](https://po-ui.io/llms-generated/po-list-box-literals.md): Interface para definição de literais utilizadas no `po-listbox`
 - [PoListViewAction](https://po-ui.io/llms-generated/po-list-view-action.md): Interface que define as ações do componente `po-list-view`.
+- [PoListViewFieldProperties](https://po-ui.io/llms-generated/po-list-view-field-properties.md): Mapeia as chaves do objeto dos itens (`p-items`) para as áreas visuais do componente.
 - [PoListViewLiterals](https://po-ui.io/llms-generated/po-list-view-literals.md): Interface para definição das literais usadas no `po-list-view`.
-- [PoLookupAdvancedFilter](https://po-ui.io/llms-generated/po-lookup-advanced-filter.md): Interface para definição das propriedades dos campos de entrada que serão criados dinamicamente.
+- [PoLookupAdvancedFilter](https://po-ui.io/llms-generated/po-lookup-advanced-filter.md): Interface para definição das propriedades dos campos de entrada que serão criados dinamicamente na busca avançada.
 - [PoLookupColumn](https://po-ui.io/llms-generated/po-lookup-column.md): Interface para configuração das colunas do po-lookup.
 - [PoLookupFilter](https://po-ui.io/llms-generated/po-lookup-filter.md): Define o tipo de busca utilizado no po-lookup.
 - [PoLookupFilteredItemsParams](https://po-ui.io/llms-generated/po-lookup-filtered-items-params.md): Interface do objeto enviado como parâmetro na função `getFilteredItems`.
@@ -352,6 +353,7 @@ ng add @po-ui/ng-components
 - [PoDynamicFieldType](https://po-ui.io/llms-generated/po-dynamic-field-type.md): Enum para definição do tipo de campo que será criado dinamicamente.
 - [PoHttpRequestType](https://po-ui.io/llms-generated/po-http-request-type.md): Define o método de requisição HTTP.
 - [PoInfoOrientation](https://po-ui.io/llms-generated/po-info-orientation.md): Define os tipos de orientações disponíveis para o `po-info`.
+- [PoListViewDetailDisplay](https://po-ui.io/llms-generated/po-list-view-detail-display.md): Define o modo de exibição do detalhe do item do `po-list-view`, utilizado em conjunto com a
 - [PoModalPasswordRecoveryType](https://po-ui.io/llms-generated/po-modal-password-recovery-type.md): Enum* para especificação do tipo de recuperação de senha.
 - [PoMultiselectFilterMode](https://po-ui.io/llms-generated/po-multiselect-filter-mode.md): Define o tipo de busca usado no po-multiselect.
 - [PoNetworkType](https://po-ui.io/llms-generated/po-network-type.md): Tipos de rede existentes no dispositivo.

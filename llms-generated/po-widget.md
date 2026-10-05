@@ -58,6 +58,7 @@ Algumas diretrizes de acessibilidade já são tratadas no componente, internamen
 
 | Propriedade | Alias | Tipo | Opcional | Padrão | Descrição |
 |---|---|---|---|---|---|
+| `actionTemplate` | `p-action-template` | `TemplateRef<any>` | não | - | Uso **interno** do `po-list-view`. Template renderizado como coluna de ação à |
 | `actions` | `'p-actions'` | `Array<PoPopupAction>` | sim | - | Lista de ações exibidas no header do componente. |
 | `avatar` | `p-avatar` | `PoWidgetAvatar` | sim | - | Define o avatar a ser exibido à esquerda no Widget. |
 | `background` | `'p-background'` | `string` | sim | - | Define uma imagem de fundo. |
@@ -72,7 +73,9 @@ Algumas diretrizes de acessibilidade já são tratadas no componente, internamen
 | `primary` | `'p-primary'` | `boolean` | sim | `false` | Opção para que o `po-widget` fique em destaque. |
 | `primaryLabel` | `'p-primary-label'` | `string` | sim | - | Define o label e exibe a ação primária no footer do componente. |
 | `secondaryLabel` | `'p-secondary-label'` | `string` | sim | - | Define o label e exibe a ação secundária no footer do componente. |
+| `selection` | `p-selection` | `PoWidgetSelection` | não | - | Uso **interno** do `po-list-view`. Habilita e configura a coluna de seleção |
 | `size` | `'p-size'` | `string` | sim | `medium` | Define o tamanho dos botões do componente: |
+| `subtitle` | `p-subtitle` | `string` | não | - | Uso **interno** do `po-list-view`. Define um subtítulo exibido no header, |
 | `tagIcon` | `'p-tag-icon'` | `string | TemplateRef<void>` | sim | - | Define o ícone exibido ao lado do label da `p-tag`. |
 | `tagLabel` | `'p-tag'` | `string` | sim | - | Label da tag exibida no header. |
 | `tagPosition` | `p-tag-position` | `string` | sim | `right` | Define o posicionamento da `po-tag` no cabeçalho do Widget: |
