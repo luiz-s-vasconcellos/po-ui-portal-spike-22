@@ -10,9 +10,11 @@ Interface para definição dos itens do componente `po-tree-view`.
 
 | Propriedade | Tipo | Opcional | Descrição |
 |---|---|---|---|
-| `expanded` | `boolean` | sim | Expande o item. |
-| `isSelectable` | `boolean | null` | sim | Permite ativar/desativar a seleção do item |
-| `label` | `string` | não | Desabilita a selecão do item. |
+| `disabled` | `boolean` | sim | Desabilita a interação com o item. |
+| `expanded` | `boolean` | sim | Expande o item, exibindo seus `subItems`. |
+| `isSelectable` | `boolean | null` | sim | Permite ativar ou desativar a seleção do item. |
+| `label` | `string` | não | Texto de exibição do item. |
 | `selected` | `boolean | null` | sim | Marca o item como selecionado. |
-| `subItems` | `Array<PoTreeViewItem>` | sim | Lista de itens do próximo nível, e assim consecutivamente até que se atinja o quarto nível. |
-| `value` | `string | number` | não | Valor do item que poderá ser utilizado como referência para sua identificação. |
+| `showIcon` | `boolean` | sim | Habilita a exibição de ícone no item. |
+| `subItems` | `Array<PoTreeViewItem>` | sim | Lista de itens do próximo nível, permitindo a construção hierárquica da árvore. |
+| `value` | `string | number` | não | Valor do item utilizado como referência para sua identificação. |

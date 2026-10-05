@@ -111,7 +111,7 @@ ng add @po-ui/ng-components
 - [PoTimepickerComponent](https://po-ui.io/llms-generated/po-timepicker.md): O `po-timepicker` é um componente para seleção de horário que permite a digitação e/ou seleção via painel flutuante.
 - [PoToasterComponent](https://po-ui.io/llms-generated/po-toaster.md): O Toaster serve para exibir uma mensagem temporária em linha na interface, podendo ou não ser removida pelos usuários a depender do uso especificado.
 - [PoToolbarComponent](https://po-ui.io/llms-generated/po-toolbar.md): O componente `po-toolbar` é um cabeçalho para o título da aplicação e informações de usuário e notificações quando houver necessidade.
-- [PoTreeViewComponent](https://po-ui.io/llms-generated/po-tree-view.md): O componente fornece um modelo de visualização em árvore, possibilitando a visualização das informações de maneira
+- [PoTreeViewComponent](https://po-ui.io/llms-generated/po-tree-view.md): O componente fornece um modelo de visualização em árvore, possibilitando a exibição de informações de maneira
 - [PoUploadComponent](https://po-ui.io/llms-generated/po-upload.md): O componente `po-upload` permite que o usuário envie arquivo(s) ao servidor e acompanhe o progresso.
 - [PoUrlComponent](https://po-ui.io/llms-generated/po-url.md): Este é um componente baseado em input, com várias propriedades do input nativo e outras
 - [PoWidgetComponent](https://po-ui.io/llms-generated/po-widget.md): O componente `po-widget` é recomendado para exibição de *dashboards*, podendo ser utilizado
