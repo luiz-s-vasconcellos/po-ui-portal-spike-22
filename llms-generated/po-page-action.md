@@ -24,6 +24,7 @@ a ação é exibida dentro do *dropdown*.
 | `selected` | `boolean` | sim | Define se a ação está selecionada. |
 | `separator` | `boolean` | sim | Atribui uma linha separadora acima do item. |
 | `subItems` | `Array<PoPopupAction>` | sim | Define uma lista de subitens para criação de menus aninhados. |
+| `subItemsLazy` | `(item: PoPopupAction) => Observable<Array<PoPopupAction>>` | sim | Define o carregamento assíncrono (lazy loading) dos subitens de um agrupador. |
 | `type` | `string` | sim | Define a cor do item. |
 | `url` | `string` | sim | URL para redirecionamento. Aceita rotas internas e links externos. |
 | `visible` | `boolean | Function` | sim | Define a visibilidade da ação. Aceita um valor booleano ou uma função que retorna booleano. |

@@ -3106,11 +3106,19 @@ export class AppModule { }
 
 | Propriedade | Alias | Tipo | Opcional | Padrão | Descrição |
 |---|---|---|---|---|---|
-| `actions` | `'p-actions'` | `PoDropdownAction[]` | não | - | Lista de ações que serão exibidas no componente. |
+| `actions` | `'p-actions'` | `Array<PoDropdownAction>` | não | - | Lista de ações que serão exibidas no componente. |
 | `disabled` | `'p-disabled'` | `boolean` | sim | `false` | Desabilita o campo. |
 | `label` | `'p-label'` | `string` | não | - | Adiciona um rótulo ao `dropdown`. |
 | `position` | `'p-position'` | `string` | sim | `bottom-left` | Define a posição preferencial de abertura do popup do dropdown em relação ao botão. |
 | `size` | `'p-size'` | `string` | sim | `medium` | Define o tamanho do componente: |
+
+## Outputs
+
+| Evento | Alias | Tipo | Descrição |
+|---|---|---|---|
+| `clickItem` | `'p-click-item'` | `EventEmitter` | Evento disparado a cada clique em um item do menu. |
+| `rootItemsLoad` | `'p-root-items-load'` | `EventEmitter` | Evento disparado no momento em que a requisição assíncrona do nível raiz é iniciada |
+| `subItemsLoad` | `'p-sub-items-load'` | `EventEmitter` | Evento disparado no momento em que a requisição assíncrona de um subnível é iniciada. |
 
 
 ---
@@ -6620,12 +6628,20 @@ Para funcionar corretamente é preciso adicionar a propriedade `p-popup-header-t
 
 | Propriedade | Alias | Tipo | Opcional | Padrão | Descrição |
 |---|---|---|---|---|---|
-| `actions` | `'p-actions'` | `PoPopupAction[]` | não | - | Lista de ações que serão exibidas no componente. |
+| `actions` | `'p-actions'` | `Array<PoPopupAction>` | não | - | Lista de ações que serão exibidas no componente. |
 | `customPositions` | `'p-custom-positions'` | `string[]` | sim | - | Define as posições e a sequência que o `po-popup` poderá rotacionar. A sequência será definida pela ordem passada |
 | `hideArrow` | `'p-hide-arrow'` | `boolean` | sim | `false` | Oculta a seta do componente *popup*. |
 | `position` | `'p-position'` | `string` | sim | `bottom-left` | Define a posição inicial que o `po-popup` abrirá em relação ao componente alvo. Sugere-se que seja |
 | `size` | `'p-size'` | `string` | sim | `medium` | Define o tamanho dos componentes de formulário no template: |
 | `target` | `'p-target'` | `any` | não | - | Para utilizar o `po-popup` deve-se colocar uma variável local no componente que disparará o evento |
+
+## Outputs
+
+| Evento | Alias | Tipo | Descrição |
+|---|---|---|---|
+| `clickItem` | `'p-click-item'` | `EventEmitter` | Evento disparado a cada clique em um item do menu. |
+| `rootItemsLoad` | `'p-root-items-load'` | `EventEmitter` | Evento disparado no momento em que a requisição assíncrona do nível raiz é iniciada |
+| `subItemsLoad` | `'p-sub-items-load'` | `EventEmitter` | Evento disparado no momento em que a requisição assíncrona de um subnível é iniciada. |
 
 ## Métodos
 
@@ -11379,6 +11395,7 @@ Interface para as ações do componente `po-dropdown`.
 | `selected` | `boolean` | sim | Define se a ação está selecionada. |
 | `separator` | `boolean` | sim | Atribui uma linha separadora acima do item. |
 | `subItems` | `Array<PoPopupAction>` | sim | Define uma lista de subitens para criação de menus aninhados. |
+| `subItemsLazy` | `(item: PoPopupAction) => Observable<Array<PoPopupAction>>` | sim | Define o carregamento assíncrono (lazy loading) dos subitens de um agrupador. |
 | `type` | `string` | sim | Define a cor do item. |
 | `url` | `string` | sim | URL para redirecionamento. Aceita rotas internas e links externos. |
 | `visible` | `boolean | Function` | sim | Define a visibilidade da ação. Aceita um valor booleano ou uma função que retorna booleano. |
@@ -12155,7 +12172,10 @@ Interface para definição de literais utilizadas no `po-listbox`
 | `backToPreviousGroup` | `string` | sim | Texto do botão para voltar ao agrupador anterior. |
 | `noItems` | `string` | sim | Texto exibido quando não houver itens na lista |
 | `placeholderSearch` | `string` | sim | Texto do *placeholder* do campo de busca. |
+| `retry` | `string` | sim | Texto do botão para tentar novamente o carregamento de um subnível. |
 | `selectAll` | `string` | sim | Texto do checkbox para selecionar todos os itens. |
+| `subItemsErrorMessage` | `string` | sim | Mensagem exibida quando o carregamento assíncrono de um subnível falha. |
+| `subItemsLoading` | `string` | sim | Texto acessível anunciado durante o carregamento assíncrono de um subnível. |
 
 
 ---
@@ -12182,6 +12202,7 @@ definir quatro ações ou mais.
 | `selected` | `boolean` | sim | Define se a ação está selecionada. |
 | `separator` | `boolean` | sim | Atribui uma linha separadora acima do item. |
 | `subItems` | `Array<PoPopupAction>` | sim | Define uma lista de subitens para criação de menus aninhados. |
+| `subItemsLazy` | `(item: PoPopupAction) => Observable<Array<PoPopupAction>>` | sim | Define o carregamento assíncrono (lazy loading) dos subitens de um agrupador. |
 | `type` | `string` | sim | Define a cor do item. |
 | `url` | `string` | sim | URL para redirecionamento. Aceita rotas internas e links externos. |
 | `visible` | `boolean | Function` | sim | Define a visibilidade da ação. Aceita um valor booleano ou uma função que retorna booleano. |
@@ -12913,6 +12934,7 @@ a ação é exibida dentro do *dropdown*.
 | `selected` | `boolean` | sim | Define se a ação está selecionada. |
 | `separator` | `boolean` | sim | Atribui uma linha separadora acima do item. |
 | `subItems` | `Array<PoPopupAction>` | sim | Define uma lista de subitens para criação de menus aninhados. |
+| `subItemsLazy` | `(item: PoPopupAction) => Observable<Array<PoPopupAction>>` | sim | Define o carregamento assíncrono (lazy loading) dos subitens de um agrupador. |
 | `type` | `string` | sim | Define a cor do item. |
 | `url` | `string` | sim | URL para redirecionamento. Aceita rotas internas e links externos. |
 | `visible` | `boolean | Function` | sim | Define a visibilidade da ação. Aceita um valor booleano ou uma função que retorna booleano. |
@@ -14201,6 +14223,7 @@ Interface para lista de ações do componente.
 | `selected` | `boolean` | sim | Define se a ação está selecionada. |
 | `separator` | `boolean` | sim | Atribui uma linha separadora acima do item. |
 | `subItems` | `Array<PoPopupAction>` | sim | Define uma lista de subitens para criação de menus aninhados. |
+| `subItemsLazy` | `(item: PoPopupAction) => Observable<Array<PoPopupAction>>` | sim | Define o carregamento assíncrono (lazy loading) dos subitens de um agrupador. |
 | `type` | `string` | sim | Define a cor do item. |
 | `url` | `string` | sim | URL para redirecionamento. Aceita rotas internas e links externos. |
 | `visible` | `boolean | Function` | sim | Define a visibilidade da ação. Aceita um valor booleano ou uma função que retorna booleano. |
@@ -14788,6 +14811,7 @@ Interface para lista de ações do componente.
 | `selected` | `boolean` | sim | Define se a ação está selecionada. |
 | `separator` | `boolean` | sim | Atribui uma linha separadora acima do item. |
 | `subItems` | `Array<PoPopupAction>` | sim | Define uma lista de subitens para criação de menus aninhados. |
+| `subItemsLazy` | `(item: PoPopupAction) => Observable<Array<PoPopupAction>>` | sim | Define o carregamento assíncrono (lazy loading) dos subitens de um agrupador. |
 | `type` | `string` | sim | Define a cor do item. |
 | `url` | `string` | sim | URL para redirecionamento. Aceita rotas internas e links externos. |
 | `visible` | `boolean | Function` | sim | Define a visibilidade da ação. Aceita um valor booleano ou uma função que retorna booleano. |
@@ -15278,6 +15302,7 @@ Interface para lista de ações do componente.
 | `selected` | `boolean` | sim | Define se a ação está selecionada. |
 | `separator` | `boolean` | sim | Atribui uma linha separadora acima do item. |
 | `subItems` | `Array<PoPopupAction>` | sim | Define uma lista de subitens para criação de menus aninhados. |
+| `subItemsLazy` | `(item: PoPopupAction) => Observable<Array<PoPopupAction>>` | sim | Define o carregamento assíncrono (lazy loading) dos subitens de um agrupador. |
 | `type` | `string` | sim | Define a cor do item. |
 | `url` | `string` | sim | URL para redirecionamento. Aceita rotas internas e links externos. |
 | `visible` | `boolean | Function` | sim | Define a visibilidade da ação. Aceita um valor booleano ou uma função que retorna booleano. |

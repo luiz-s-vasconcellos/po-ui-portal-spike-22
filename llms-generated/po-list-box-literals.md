@@ -13,4 +13,7 @@ Interface para definição de literais utilizadas no `po-listbox`
 | `backToPreviousGroup` | `string` | sim | Texto do botão para voltar ao agrupador anterior. |
 | `noItems` | `string` | sim | Texto exibido quando não houver itens na lista |
 | `placeholderSearch` | `string` | sim | Texto do *placeholder* do campo de busca. |
+| `retry` | `string` | sim | Texto do botão para tentar novamente o carregamento de um subnível. |
 | `selectAll` | `string` | sim | Texto do checkbox para selecionar todos os itens. |
+| `subItemsErrorMessage` | `string` | sim | Mensagem exibida quando o carregamento assíncrono de um subnível falha. |
+| `subItemsLoading` | `string` | sim | Texto acessível anunciado durante o carregamento assíncrono de um subnível. |

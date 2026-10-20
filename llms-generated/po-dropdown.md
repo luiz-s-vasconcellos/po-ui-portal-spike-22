@@ -64,8 +64,16 @@ export class AppModule { }
 
 | Propriedade | Alias | Tipo | Opcional | Padrão | Descrição |
 |---|---|---|---|---|---|
-| `actions` | `'p-actions'` | `PoDropdownAction[]` | não | - | Lista de ações que serão exibidas no componente. |
+| `actions` | `'p-actions'` | `Array<PoDropdownAction>` | não | - | Lista de ações que serão exibidas no componente. |
 | `disabled` | `'p-disabled'` | `boolean` | sim | `false` | Desabilita o campo. |
 | `label` | `'p-label'` | `string` | não | - | Adiciona um rótulo ao `dropdown`. |
 | `position` | `'p-position'` | `string` | sim | `bottom-left` | Define a posição preferencial de abertura do popup do dropdown em relação ao botão. |
 | `size` | `'p-size'` | `string` | sim | `medium` | Define o tamanho do componente: |
+
+## Outputs
+
+| Evento | Alias | Tipo | Descrição |
+|---|---|---|---|
+| `clickItem` | `'p-click-item'` | `EventEmitter` | Evento disparado a cada clique em um item do menu. |
+| `rootItemsLoad` | `'p-root-items-load'` | `EventEmitter` | Evento disparado no momento em que a requisição assíncrona do nível raiz é iniciada |
+| `subItemsLoad` | `'p-sub-items-load'` | `EventEmitter` | Evento disparado no momento em que a requisição assíncrona de um subnível é iniciada. |
